@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoDecoder.Test", "VideoD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RtspClient", "RtspClient\RtspClient.csproj", "{62FF8F8E-838D-4FE6-8642-3580F754227F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoDecoder.Example", "VideoDecoder.Example\VideoDecoder.Example.csproj", "{57017F1A-8A25-4C9B-875E-7445BBCD4327}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{62FF8F8E-838D-4FE6-8642-3580F754227F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62FF8F8E-838D-4FE6-8642-3580F754227F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62FF8F8E-838D-4FE6-8642-3580F754227F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57017F1A-8A25-4C9B-875E-7445BBCD4327}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57017F1A-8A25-4C9B-875E-7445BBCD4327}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57017F1A-8A25-4C9B-875E-7445BBCD4327}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57017F1A-8A25-4C9B-875E-7445BBCD4327}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

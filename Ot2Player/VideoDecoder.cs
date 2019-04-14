@@ -32,9 +32,16 @@ namespace Ot2Player.VideoDecoders
         {
             outputResolution = resolution;
             decodingThread = new Thread(DecodeFrames);
+            Console.WriteLine("Current directory: " + Environment.CurrentDirectory);
+            Console.WriteLine("Runnung in {0}-bit mode.", Environment.Is64BitProcess ? "64" : "32");
 
-            //FFMPEG initialization
-            _pFormatContext = ffmpeg.avformat_alloc_context();
+            FFmpegBinariesHelper.RegisterFFmpegBinaries();
+
+            Console.WriteLine($"FFmpeg version info: {ffmpeg.av_version_info()}");
+
+
+        //FFMPEG initialization
+        _pFormatContext = ffmpeg.avformat_alloc_context();
 
             var pFormatContext = _pFormatContext;
             //ffmpeg.avformat_open_input(&pFormatContext, url, null, null).ThrowExceptionIfError();
@@ -57,8 +64,10 @@ namespace Ot2Player.VideoDecoders
             //_pCodecContext = pStream->codec;
 
             //var codecId = _pCodecContext->codec_id;
+
             var codecId = AVCodecID.AV_CODEC_ID_H264;
             var pCodec = ffmpeg.avcodec_find_decoder(codecId);
+            _pCodecContext = ffmpeg.avcodec_alloc_context3(pCodec);
             if (pCodec == null) throw new InvalidOperationException("Unsupported codec.");
 
             ffmpeg.avcodec_open2(_pCodecContext, pCodec, null).ThrowExceptionIfError();

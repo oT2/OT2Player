@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -45,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FFmpegBinariesHelper.cs" />
+    <Compile Include="FFmpegHelper.cs" />
     <Compile Include="VideoDecoder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\Codecs.cs" />
@@ -52,17 +55,33 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="FFMPEG\avcodec-58.dll" />
-    <Content Include="FFMPEG\avdevice-58.dll" />
-    <Content Include="FFMPEG\avfilter-7.dll" />
-    <Content Include="FFMPEG\avformat-58.dll" />
-    <Content Include="FFMPEG\avutil-56.dll" />
-    <Content Include="FFMPEG\FFmpeg.AutoGen.dll">
+    <Content Include="FFmpeg\bin\x64\avcodec-58.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="FFMPEG\postproc-55.dll" />
-    <Content Include="FFMPEG\swresample-3.dll" />
-    <Content Include="FFMPEG\swscale-5.dll" />
+    <Content Include="FFmpeg\bin\x64\avdevice-58.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FFmpeg\bin\x64\avfilter-7.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FFmpeg\bin\x64\avformat-58.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FFmpeg\bin\x64\avutil-56.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FFmpeg\bin\x64\FFmpeg.AutoGen.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FFmpeg\bin\x64\postproc-55.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FFmpeg\bin\x64\swresample-3.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FFmpeg\bin\x64\swscale-5.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
