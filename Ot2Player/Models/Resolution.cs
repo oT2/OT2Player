@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace OT2Player.VideoDecoder.Models
 {
-    public enum Codec
+    public struct Resolution
     {
-        H264,
-        H265
+        int height;
+        int width;
     }
 }

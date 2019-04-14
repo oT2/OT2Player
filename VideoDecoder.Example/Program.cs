@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VideoDecoder.Example
+namespace OT2Player.VideoDecoder.Example
 {
     class Program
     {
@@ -12,7 +12,7 @@ namespace VideoDecoder.Example
         {
 
 
-            var decoder = new Ot2Player.VideoDecoders.VideoDecoder(Ot2Player.VideoDecoders.Codec.H264, new Ot2Player.VideoDecoders.Resolution());
+            var decoder = new OT2Player.VideoDecoder.VideoDecoder(OT2Player.VideoDecoder.Models.Codec.H264, new OT2Player.VideoDecoder.Models.Resolution());
         }
     }
 }

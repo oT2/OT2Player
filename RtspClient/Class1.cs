@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RtspClient
+namespace OT2Player.RtspClient
 {
     public class Class1
     {

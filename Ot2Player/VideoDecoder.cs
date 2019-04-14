@@ -1,5 +1,6 @@
 ﻿using FFmpeg.AutoGen;
 using FFmpeg.AutoGen.Example;
+using OT2Player.VideoDecoder.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Ot2Player.VideoDecoders
+namespace OT2Player.VideoDecoder
 {
     public unsafe class VideoDecoder
     {
@@ -85,7 +86,7 @@ namespace Ot2Player.VideoDecoders
 
         }
 
-        private bool DecodeFrame(out AVFrame frame)
+        private bool DecodeFrame(byte[] data)
         {
             // loop on rawFrames
             ffmpeg.av_frame_unref(_pFrame);

@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ot2Player.VideoDecoders
+namespace OT2Player.StreamDecoder
 {
-    public struct Resolution
+    public class StreamDecoder
     {
-        int height;
-        int width;
     }
 }

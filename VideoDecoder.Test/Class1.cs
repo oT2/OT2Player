@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VideoDecoder.Test
+namespace OT2Player.VideoDecoder.Test
 {
     public class Class1
     {
