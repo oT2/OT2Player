@@ -6,9 +6,15 @@ using System.Threading.Tasks;
 
 namespace OT2Player.VideoDecoder.Models
 {
-    public struct Resolution
+    public class Resolution
     {
-        int height;
-        int width;
+        public int height;
+        public int width;
+
+        public Resolution(int height, int width)
+        {
+            this.height = height;
+            this.width = width;
+        }
     }
 }
